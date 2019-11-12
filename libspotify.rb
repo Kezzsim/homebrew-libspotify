@@ -1,7 +1,6 @@
 class Libspotify < Formula
   desc "C interface to Spotify"
-  homepage "http://developer.spotify.com/en/libspotify/overview/"
-  url "https://developer.spotify.com/download/libspotify/libspotify-12.1.51-Darwin-universal.zip"
+  url "https://github.com/mopidy/libspotify-archive/raw/master/libspotify-12.1.51-Darwin-universal.zip"
   sha256 "80053f0779f6192a8052732904d88b91acc62a350831f6b585a3c6ac10cb8fbd"
 
   bottle :unneeded
@@ -17,7 +16,7 @@ class Libspotify < Formula
     (lib/"pkgconfig/libspotify.pc").write pc_file
   end
 
-  def pc_file; <<-EOS.undent
+  def pc_file; <<-EOS
     prefix=#{opt_prefix}
     exec_prefix=${prefix}
     libdir=${exec_prefix}/lib
